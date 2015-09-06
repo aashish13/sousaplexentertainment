@@ -2,13 +2,23 @@
 <html>
 <head>
   <title>Sousaplexentertainment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+  <%= stylesheet_link_tag "bootstrap" %>
+  <%= stylesheet_link_tag "bootstrap-responsive" %>
+  <%= stylesheet_link_tag "prettyPhoto" %>
+  <%= stylesheet_link_tag "style" %>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+    <div class="container">
+        <%= render "partial/header" %>
+        <%= yield %>
+        <%= render "partial/footer" %>
+    </div>
 </body>
 </html>
