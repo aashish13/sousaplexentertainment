@@ -11,7 +11,59 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150906171626) do
+ActiveRecord::Schema.define(version: 20150907012622) do
+
+  create_table "posters", force: :cascade do |t|
+    t.string   "movie_title",        limit: 255
+    t.string   "movie_logline",      limit: 255
+    t.string   "movie_synopsis",     limit: 255
+    t.integer  "movie_budget_start", limit: 4
+    t.integer  "movie_budget_end",   limit: 4
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  create_table "project_posters", force: :cascade do |t|
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.integer  "project_id", limit: 4
+    t.integer  "poster_id",  limit: 4
+  end
+
+  create_table "project_talents", force: :cascade do |t|
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.integer  "project_id", limit: 4
+    t.integer  "talent_id",  limit: 4
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "movie_title",        limit: 255
+    t.string   "movie_logline",      limit: 255
+    t.string   "movie_synopsis",     limit: 255
+    t.string   "movie_budget_start", limit: 255
+    t.string   "movie_budget_end",   limit: 255
+    t.float    "funding_level",      limit: 24
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  create_table "talents", force: :cascade do |t|
+    t.string   "first_name",  limit: 255
+    t.string   "last_name",   limit: 255
+    t.string   "status",      limit: 255
+    t.string   "talent_type", limit: 255
+    t.boolean  "main_team"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "user_viewable_projects", force: :cascade do |t|
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.integer  "user_id",    limit: 4
+    t.integer  "project_id", limit: 4
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username",               limit: 255
