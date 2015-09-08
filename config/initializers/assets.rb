@@ -11,4 +11,4 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( bootstrap.css )
 Rails.application.config.assets.precompile += %w( bootstrap-responsive.css )
 Rails.application.config.assets.precompile += %w( prettyPhoto.css )
-Rails.application.config.assets.precompile += %w( style.css )
+Rails.application.config.assets.precompile += %w( style.css.scss )

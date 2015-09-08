@@ -384,7 +384,7 @@ li.sfHover > a > .sf-sub-indicator {
 	background-color: rgba(0,0,0, 0.2);	
 	-moz-opacity: 0;
 	opacity: 0;
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=0);
+	-ms-filter:#{"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"};
 	filter: alpha(opacity=0);
 	-webkit-transition: opacity 0.5s ease;
 	-moz-transition: opacity 0.5s ease;
@@ -392,7 +392,7 @@ li.sfHover > a > .sf-sub-indicator {
 	-o-transition: opacity 0.5s ease;
 	transition: opacity 0.5s ease;	
 }
-#main-carousel .carousel-box:hover .mask {opacity: 1; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=100);filter: alpha(opacity=100); }
+#main-carousel .carousel-box:hover .mask {opacity: 1; -ms-filter:#{"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"};filter: alpha(opacity=100); }
 
 .carousel-box .zoom-icon, .carousel-box .link-icon { top:187px; }
 
@@ -630,7 +630,7 @@ border-top-left-radius: 5px;
 }
 .projects-box:hover .mask,
 .thumb-post:hover .mask
-	{opacity: 1; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=100);filter: alpha(opacity=100); }
+	{opacity: 1; -ms-filter:#{"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"};filter: alpha(opacity=100); }
 
 .link-icon { background-position: 0 -30px; top: 70px; left: 115px; }
 .zoom-icon { background-position: 0px 0px; top: 70px; left: 115px; }
@@ -653,7 +653,7 @@ border-top-left-radius: 5px;
 .mask-icon:hover .quartercircletopright-mask,
 .mask-icon:hover .quartercirclebottomright-mask,
 .mask-icon:hover .quartercirclebottomleft-mask
-  { -moz-opacity: 1; opacity: 1;	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=100); filter: alpha(opacity=100); }
+  { -moz-opacity: 1; opacity: 1;	-ms-filter:#{"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"}; filter: alpha(opacity=100); }
 
 .mask-icon.two { position:absolute; }
 .mask-icon.two .link-icon, .mask-icon.two .zoom-icon { 
@@ -665,13 +665,13 @@ border-top-left-radius: 5px;
 	-webkit-border-radius: 90px;
 	-moz-opacity: 0.7;
 	opacity: 0.7;
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=70);
+	-ms-filter:#{"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"};
 	filter: alpha(opacity=70);
 	left:115px;
 }
 .mask-icon.two .link-icon {	background-position: 5px -25px; }
 .mask-icon.two .zoom-icon {	background-position: 5px 5px; }
-.mask-icon.two .link-icon:hover, .mask-icon.two .zoom-icon:hover {-moz-opacity: 1; opacity: 1;	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=100); filter: alpha(opacity=100);}
+.mask-icon.two .link-icon:hover, .mask-icon.two .zoom-icon:hover {-moz-opacity: 1; opacity: 1;	-ms-filter:#{"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"}; filter: alpha(opacity=100);}
 .mask:hover .two .link-icon { left:83px;}
 .mask:hover .two .zoom-icon { left:133px;}
 
@@ -684,7 +684,7 @@ border-top-left-radius: 5px;
 
 	-moz-opacity: 0.7;
 	opacity: 0.7;
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=70);
+	-ms-filter:#{"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"};
 	filter: alpha(opacity=70);
 
 	-webkit-transition: all 0.4s ease;
@@ -746,7 +746,7 @@ border-top-left-radius: 5px;
 #entry-portfolio .thumb img, #entry-portfolio-item .thumb img { width:100%; }
 
 #container-portfolio .item { margin-bottom:30px; }
-#container-portfolio .thumb:hover .mask {opacity: 1; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=100);filter: alpha(opacity=100); }
+#container-portfolio .thumb:hover .mask {opacity: 1; -ms-filter:#{"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"};filter: alpha(opacity=100); }
 #container-portfolio .mask { background-color: rgba(255,252,0, 0.95); left:0; }
 .thumb .mask h4  {
 	color: #1E2126;
@@ -1002,8 +1002,8 @@ border-top-left-radius: 5px;
 
 .blog-carousel { margin-top:10px; margin-bottom:10px; }
 .blog-carousel li, .item-carousel li, .gallery-carousel li { margin-right: 5px; }
-.blog-carousel .flex-active-slide img, .item-carousel .flex-active-slide img, .gallery-carousel .flex-active-slide img { opacity: 1; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=100);filter: alpha(opacity=100); cursor: default; }
-.blog-carousel img, .item-carousel img, .gallery-carousel img { display: block; opacity: 0.5; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=50);filter: alpha(opacity=50); cursor: pointer;
+.blog-carousel .flex-active-slide img, .item-carousel .flex-active-slide img, .gallery-carousel .flex-active-slide img { opacity: 1; -ms-filter:#{"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"};filter: alpha(opacity=100); cursor: default; }
+.blog-carousel img, .item-carousel img, .gallery-carousel img { display: block; opacity: 0.5; -ms-filter:#{"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"};filter: alpha(opacity=50); cursor: pointer;
 -webkit-transition: all 0.5s ease;
 -moz-transition: all 0.5s ease;
 -ms-transition: all 0.5s ease;
@@ -1011,7 +1011,7 @@ border-top-left-radius: 5px;
 transition: all 0.5s ease;
  }
  
-.blog-carousel img:hover, .item-carousel img:hover, .gallery-carousel img:hover { opacity: 1; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=100);filter: alpha(opacity=100); }
+.blog-carousel img:hover, .item-carousel img:hover, .gallery-carousel img:hover { opacity: 1; -ms-filter:#{"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"};filter: alpha(opacity=100); }
 .blog-slider, .gallery-slider, .item-slider { margin-top:0; border:0; }
 .format-slideshow .thumb-post { margin-bottom:0;}
 .format-slideshow .flexslider, .item-carousel.flexslider, .gallery-carousel.flexslider { background: transparent; border: 5px solid #1E2126; }
@@ -1054,7 +1054,7 @@ transition: all 0.5s ease;
 
 .thumbnail { padding:0; line-height: 20px; background-color:#1E2126; border: 1px solid #1E2126; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
 .thumbnail img { width: 100%; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -ms-transition: all 0.2s linear; transition: all 0.2s linear; }
-.thumbnail img:hover { opacity: 0.8 !important; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=80) !important;filter: alpha(opacity=80) !important; }
+.thumbnail img:hover { opacity: 0.8 !important; -ms-filter:#{"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"} !important;filter: alpha(opacity=80) !important; }
 .thumbnail .caption { padding: 15px; }
 .thumbnail > div { border : 5px solid #1E2126; border-bottom:0; }
 
@@ -1132,8 +1132,8 @@ h5 .label-colored { color: #62676E; }
 		.thumb .quartercircletopright-mask, 
 		.thumb .quartercirclebottomright-mask, 
 		.thumb .quartercirclebottomleft-mask { display:none; }
-		.mask .link-icon, .mask .zoom-icon { -moz-opacity: 0.7;	opacity: 0.7; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=70);	filter: alpha(opacity=70); }
-		.mask .link-icon:hover, .mask .zoom-icon:hover { -moz-opacity: 1;	opacity: 1; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=100);	filter: alpha(opacity=100); }		
+		.mask .link-icon, .mask .zoom-icon { -moz-opacity: 0.7;	opacity: 0.7; -ms-filter:#{"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"};	filter: alpha(opacity=70); }
+		.mask .link-icon:hover, .mask .zoom-icon:hover { -moz-opacity: 1;	opacity: 1; -ms-filter:#{"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"};	filter: alpha(opacity=100); }
 		.srv-block ul { height: auto; }
 		.slides li .slider-img  { margin-right:0px;}
 		.slider-description { display:none; }
@@ -1231,9 +1231,9 @@ h5 .label-colored { color: #62676E; }
 			
 		.projects-box .link-icon, .projects-box .zoom-icon,
 		.thumb .link-icon, .thumb .zoom-icon
-			{ -moz-opacity: 0.7; opacity: 0.7; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=70); filter: alpha(opacity=70); }
+			{ -moz-opacity: 0.7; opacity: 0.7; -ms-filter: #{"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"}; filter: alpha(opacity=70); }
 			
-		.projects-box .link-icon:hover, .projects-box .zoom-icon:hover, .thumb .link-icon:hover, .thumb .zoom-icon:hover { -moz-opacity: 1;	opacity: 1; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=100);	filter: alpha(opacity=100); }
+		.projects-box .link-icon:hover, .projects-box .zoom-icon:hover, .thumb .link-icon:hover, .thumb .zoom-icon:hover { -moz-opacity: 1;	opacity: 1; -ms-filter:#{"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"};	filter: alpha(opacity=100); }
 		
 		.srv-block ul { height: auto; }
 		.slider-description { margin-right: 40px; margin-bottom:40px; }
