@@ -13,76 +13,79 @@
 
 ActiveRecord::Schema.define(version: 20150907012622) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "posters", force: :cascade do |t|
-    t.string   "movie_title",        limit: 255
-    t.string   "movie_logline",      limit: 255
-    t.string   "movie_synopsis",     limit: 255
-    t.integer  "movie_budget_start", limit: 4
-    t.integer  "movie_budget_end",   limit: 4
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.string   "movie_title"
+    t.string   "movie_logline"
+    t.string   "movie_synopsis"
+    t.integer  "movie_budget_start"
+    t.integer  "movie_budget_end"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "project_posters", force: :cascade do |t|
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.integer  "project_id", limit: 4
-    t.integer  "poster_id",  limit: 4
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "project_id"
+    t.integer  "poster_id"
   end
 
   create_table "project_talents", force: :cascade do |t|
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.integer  "project_id", limit: 4
-    t.integer  "talent_id",  limit: 4
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "project_id"
+    t.integer  "talent_id"
   end
 
   create_table "projects", force: :cascade do |t|
-    t.string   "movie_title",        limit: 255
-    t.string   "movie_logline",      limit: 255
-    t.string   "movie_synopsis",     limit: 255
-    t.string   "movie_budget_start", limit: 255
-    t.string   "movie_budget_end",   limit: 255
-    t.float    "funding_level",      limit: 24
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.string   "movie_title"
+    t.string   "movie_logline"
+    t.string   "movie_synopsis"
+    t.string   "movie_budget_start"
+    t.string   "movie_budget_end"
+    t.float    "funding_level"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "talents", force: :cascade do |t|
-    t.string   "first_name",  limit: 255
-    t.string   "last_name",   limit: 255
-    t.string   "status",      limit: 255
-    t.string   "talent_type", limit: 255
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "status"
+    t.string   "talent_type"
     t.boolean  "main_team"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "user_viewable_projects", force: :cascade do |t|
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.integer  "user_id",    limit: 4
-    t.integer  "project_id", limit: 4
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "project_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "username",               limit: 255
-    t.string   "password",               limit: 255
-    t.string   "first_name",             limit: 255
-    t.string   "last_name",              limit: 255
-    t.string   "email",                  limit: 255
-    t.string   "user_type",              limit: 255
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
+    t.string   "username"
+    t.string   "password"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "user_type"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
