@@ -1,9 +1,14 @@
 source 'https://rubygems.org'
 
-
+#for admin panel
 gem 'rails_admin'
 gem 'devise'
+
+#for restricting user
 gem 'cancan'
+
+# For uploading images to S3
+gem 'paperclip', '~> 4.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
