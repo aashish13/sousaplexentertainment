@@ -17,38 +17,36 @@ ActiveRecord::Schema.define(version: 20150907012622) do
   enable_extension "plpgsql"
 
   create_table "posters", force: :cascade do |t|
-    t.string   "movie_title"
-    t.string   "movie_logline"
-    t.string   "movie_synopsis"
-    t.integer  "movie_budget_start"
-    t.integer  "movie_budget_end"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.string   "poster_name"
+    t.string   "poster_link"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  create_table "project_posters", force: :cascade do |t|
+  create_table "posters_projects", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "project_id"
     t.integer  "poster_id"
   end
 
-  create_table "project_talents", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "project_id"
-    t.integer  "talent_id"
-  end
-
   create_table "projects", force: :cascade do |t|
     t.string   "movie_title"
     t.string   "movie_logline"
     t.string   "movie_synopsis"
-    t.string   "movie_budget_start"
-    t.string   "movie_budget_end"
+    t.integer  "movie_budget_start"
+    t.integer  "movie_budget_end"
     t.float    "funding_level"
+    t.string   "poster_url"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+  end
+
+  create_table "projects_talents", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "project_id"
+    t.integer  "talent_id"
   end
 
   create_table "talents", force: :cascade do |t|
@@ -74,14 +72,14 @@ ActiveRecord::Schema.define(version: 20150907012622) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.string   "user_type"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.boolean  "admin",                  default: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"

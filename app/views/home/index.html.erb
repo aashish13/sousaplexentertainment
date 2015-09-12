@@ -3,7 +3,7 @@
 <div class="row">
   <ul id="main-carousel" class="jcarousel-skin-tango" >
     <!-- start carousel -->
-    <% [1,2,3,4,5,6].each do |i| %>
+    <% @projects.each do |project| %>
     <li>
       <div class="carousel-box">
         <div class="block view">
@@ -18,7 +18,7 @@
             </div><!-- mask-icon -->
           </div><!-- mask -->
         </div><!-- block -->
-        <h4>Addition Flyer</h4>
+        <h4><%= project.movie_title %></h4>
         <div class="border-5-1"></div>
       </div><!-- carousel-box -->
     </li>

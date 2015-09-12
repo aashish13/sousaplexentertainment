@@ -12,6 +12,6 @@ User.new(
     :password => "admin123",
     :first_name => "admin",
     :last_name => "admin",
-    :email => "admin@admin.com",
-    :user_type=> "admin"
+    :admin=> true,
+    :email => "admin@admin.com"
 ).save!

@@ -1,9 +1,9 @@
 class CreateProjectPosters < ActiveRecord::Migration
   def change
-    create_table :project_posters do |t|
+    create_table :posters_projects do |t|
       t.timestamps null: false
     end
-    add_reference :project_posters, :project
-    add_reference :project_posters, :poster
+    add_reference :posters_projects, :project
+    add_reference :posters_projects, :poster
   end
 end

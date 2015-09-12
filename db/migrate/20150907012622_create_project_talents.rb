@@ -1,9 +1,9 @@
 class CreateProjectTalents < ActiveRecord::Migration
   def change
-    create_table :project_talents do |t|
+    create_table :projects_talents do |t|
       t.timestamps null: false
     end
-    add_reference :project_talents, :project
-    add_reference :project_talents, :talent
+    add_reference :projects_talents, :project
+    add_reference :projects_talents, :talent
   end
 end

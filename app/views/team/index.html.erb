@@ -1,0 +1,73 @@
+<!-- Potfolio
+  ================================================== -->
+<div id="entry-portfolio" class="row  portfolio-3">
+  <div class="span3">
+    <div class="widget widget-list well">
+      <!-- start filter -->
+      <ul id="filters" class="nav nav-list clearfix">
+        <li><a href="#" data-filter="*" class="selected"><i class="icon-refresh icon-white"></i> All</a></li>
+        <li><a href="#" data-filter=".Director"><i class="icon-check icon-white"></i> Director</a></li>
+        <li><a href="#" data-filter=".Actor"><i class="icon-check icon-white"></i> Actor</a></li>
+        <li><a href="#" data-filter=".Writer"><i class="icon-check icon-white"></i> Writer</a></li>
+        <li><a href="#" data-filter=".Cinematography"><i class="icon-check icon-white"></i> Cinematography </a></li>
+        <li><a href="#" data-filter=".Composer"><i class="icon-check icon-white"></i> Composer </a></li>
+        <li><a href="#" data-filter=".Producer"><i class="icon-check icon-white"></i> Producer </a></li>
+
+      </ul>
+      <!-- end filter -->
+    </div><!-- widget widget-list well -->
+    <!--<div class="widget widget-list well">
+      <h5>Different Styles of Portfolio</h5>
+      <ul class="nav nav-list margin0-20">
+        <li><a href="portfolio-3.html"><i class="icon-th-list icon-white"></i> 3 Columns + Horizontal</a></li>
+        <li><a href="portfolio-vertical-3.html"><i class="icon-th-list icon-white"></i> 3 Columns + Vertical</a></li>
+        <li><a href="portfolio-description-3.html" class="selected"><i class="icon-th-list icon-white"></i> 3 Columns + Description</a></li>
+      </ul>
+      <ul class="nav nav-list margin0-20">
+        <li><a href="portfolio-big-3.html"><i class="icon-th-large icon-white"></i> 3 Big Columns</a></li>
+      </ul>
+      <ul class="nav nav-list">
+        <li><a href="portfolio-4.html"><i class="icon-th icon-white"></i> 4 Columns + Horizontal</a></li>
+        <li><a href="portfolio-description-4.html"><i class="icon-th icon-white"></i> 4 Columns + Description</a></li>
+        <li><a href="portfolio-vertical-4.html"><i class="icon-th icon-white"></i> 4 Columns + Vertical</a></li>
+      </ul>
+    </div>&lt;!&ndash; well &ndash;&gt;&ndash;&gt;-->
+  </div><!-- span3 -->
+
+  <div class="span9">
+    <div id="container-portfolio" class="row">
+      <!-- team section starts here -->
+      <% @talents.each do | talent| %>
+      <div class="item span3 <%= talent.talent_type %> black-white">
+        <div class="thumb view">
+          <%= image_tag "team/team.jpg" %>
+          <div class="mask desc">
+            <div class="mask-icon">
+              <div class="quartercircletopleft-mask"><a href="#"></a></div>
+              <div class="quartercircletopright-mask"><a href="#"></a></div>
+              <div class="quartercirclebottomright-mask"><a href="#"></a></div>
+              <div class="quartercirclebottomleft-mask"><a href="#"></a></div>
+              <a href="#" class="link-icon"></a>
+            </div><!-- mask-icon -->
+          </div><!-- mask -->
+        </div><!-- thumb -->
+        <div class="description">
+          <h4><a href="#"><%= talent.first_name %> &nbsp; <%= talent.last_name %></a></h4>
+          <span><%= talent.talent_type  %></span>
+        </div><!-- description -->
+      </div><!-- item span3 -->
+      <!-- team section ends here -->
+        <% end %>
+    </div><!-- row -->
+  </div><!-- span9 -->
+</div><!-- row entry-portfolio -->
+
+<!-- DIVIDER -->
+
+<!-- ============================================================================================= -->
+
+<!-- PAGINATION  -->
+<div class="row margin40 pag">
+
+
+</div><!-- row -->
