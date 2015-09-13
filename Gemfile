@@ -8,7 +8,9 @@ gem 'devise'
 gem 'cancan'
 
 # For uploading images to S3
-gem 'paperclip', '~> 4.3'
+gem 'paperclip'
+gem 'aws-sdk', '< 2.0'
+gem 'carrierwave'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
