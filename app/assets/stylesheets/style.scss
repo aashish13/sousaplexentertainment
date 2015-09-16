@@ -748,7 +748,7 @@ border-top-left-radius: 5px;
 #entry-portfolio .thumb img, #entry-portfolio-item .thumb img { width:100%; }
 
 #container-portfolio .item { margin-bottom:30px; }
-#container-portfolio .thumb:hover .mask {opacity: 1; -ms-filter:#{"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"};filter: alpha(opacity=100); }
+#container-portfolio .thumb:hover .mask {opacity: 0.5; -ms-filter:#{"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"};filter: alpha(opacity=100); }
 #container-portfolio .mask { background-color: rgba(255,252,0, 0.95); left:0; }
 .thumb .mask h4  {
 	color: #1E2126;
