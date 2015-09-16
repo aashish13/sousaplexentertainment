@@ -1,6 +1,6 @@
 class Poster < ActiveRecord::Base
   has_attached_file :poster_link, styles: {
-                                    :medium => '260x404!'
+                                    :medium => '260x404!',:large => '730x477!'
                                 }
   validates_attachment_content_type :poster_link, :content_type => /\Aimage/
   validates_attachment_file_name :poster_link, :matches => [/png\Z/, /jpe?g\Z/]
