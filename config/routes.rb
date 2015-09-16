@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'team' => 'team#index'
   get 'projects' => 'projects#index'
 
+  get '/project/:id', to: 'projects#show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,63 @@
+<!-- Portfolio
+  ================================================== -->
+<div id="entry-portfolio" class="row  portfolio-3 vertical">
+  <div class="span3">
+    <div class="widget widget-list well">
+      <!-- start filter -->
+      <ul id="filters" class="nav nav-list clearfix">
+        <li><a href="#" data-filter="*" class="selected"><i class="icon-refresh icon-white"></i> All</a></li>
+        <li><a href="#" data-filter=".photography"><i class="icon-check icon-white"></i> Photography</a></li>
+        <li><a href="#" data-filter=".illustration"><i class="icon-check icon-white"></i> Illustration</a></li>
+        <li><a href="#" data-filter=".black-white"><i class="icon-check icon-white"></i> Black &amp; white</a></li>
+        <li><a href="#" data-filter=".video"><i class="icon-check icon-white"></i> Video</a></li>
+      </ul>
+      <!-- end filter -->
+    </div><!-- widget widget-list well -->
+
+  </div><!-- span3 -->
+
+  <div class="span9">
+    <div id="container-portfolio" class="row">
+
+      <% @projects.each do |project| %>
+
+      <div class="item span3 illustration black-white">
+        <div class="thumb view">
+          <%= image_tag 'projects/test.jpg' %>
+          <a href="/project/<%= project.id %>" class="mask">
+            <h4>Notice</h4>
+          </a><!-- mask -->
+        </div><!-- thumb -->
+      </div><!-- item span3 -->
+
+      <% end %>
+
+    </div><!-- row -->
+  </div><!-- span9 -->
+</div><!-- row entry-portfolio -->
+
+<!-- DIVIDER -->
+<div class="row margin10-40">
+  <div class="span3"><div class="border-5-1"></div></div>
+  <div class="span9"><div class="border-5-1 hide-border"></div></div>
+</div><!-- row -->
+<!-- ============================================================================================= -->
+
+<!-- PAGINATION  -->
+<div class="row margin40 pag">
+  <div class="span3"><p></p></div>
+  <div class="span9">
+    <div class="pagination">
+      <ul>
+        <li><a href="#"></a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li class="disabled"><a href="#">...</a></li>
+        <li><a href="#">10</a></li>
+        <li><a href="#"></a></li>
+      </ul>
+    </div><!-- pagination -->
+  </div><!-- span6 -->
+</div><!-- row -->

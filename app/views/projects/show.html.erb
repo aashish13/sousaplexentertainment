@@ -1,0 +1,55 @@
+<div id="entry-portfolio-item" class="row  portfolio-3">
+  <div class="span3">
+    <!--<div class="well pagination item">
+      <ul class="">
+        <li><a href="#"></a></li>
+        <li class="nohover">Item 9 of 23</li>
+        <li><a href="#"></a></li>
+      </ul>
+    </div>&lt;!&ndash;  well &ndash;&gt;-->
+    <div class="widget well clearfix">
+      <h3><%= @project.movie_title %></h3>
+      <p><%= @project.movie_synopsis %>.</p>
+      <dl>
+        <dt>Logline</dt>
+        <dd><%= @project.movie_logline %>.</dd>
+      </dl>
+      <dl>
+        <dt>Budget Start</dt>
+        <dd>$ <%= number_to_human(@project.movie_budget_start) %></dd>
+      </dl>
+      <dl>
+        <dt>Budget End</dt>
+        <dd>$ <%= number_to_human(@project.movie_budget_end) %></dd>
+      </dl>
+      <dl>
+        <dt>Funcding Level</dt>
+        <dd><%= @project.funding_level%></dd>
+      </dl>
+
+      <!--<h5 style="display:inline-block;"><span class="label label-colored">Only $99.00</span></h5>
+      <a href="#" class="btn" style="float:right;"><i class="icon-shopping-cart"></i> Buy Now</a>-->
+    </div><!-- widget widget-list well -->
+  </div><!-- span3 -->
+
+  <div class="span9">
+    <div id="container-item" class="row">
+      <div class="span9">
+        <div class="thumb view">
+          <%= image_tag @project.posters.first.poster_link(:medium) %>
+        </div><!-- thumb -->
+      </div><!-- span9 -->
+    </div><!-- row -->
+    <div class="row">
+      <div class="span5">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="span4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div><!-- row -->
+  </div><!-- span9 -->
+</div><!-- row entry-portfolio -->
+
