@@ -23,7 +23,7 @@
 
       <div class="item span3 illustration black-white">
         <div class="thumb view">
-          <%= image_tag 'projects/test.jpg' %>
+          <%= image_tag project.posters.first.poster_link(:original) %>
           <a href="/project/<%= project.id %>" class="mask">
             <h4>Notice</h4>
           </a><!-- mask -->
