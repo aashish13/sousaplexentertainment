@@ -4,16 +4,17 @@
   <ul id="main-carousel" class="jcarousel-skin-tango" >
     <!-- start carousel -->
     <% @projects.each do |project| %>
+
     <li>
       <div class="carousel-box">
         <div class="block view">
           <%= image_tag project.posters.first.poster_link(:medium) %>
           <div class="mask">
             <div class="mask-icon">
-              <div class="quartercircletopleft-mask"><a href="#"></a></div>
-              <div class="quartercircletopright-mask"><a href="#"></a></div>
-              <div class="quartercirclebottomright-mask"><a href="#"></a></div>
-              <div class="quartercirclebottomleft-mask"><a href="#"></a></div>
+              <div class="quartercircletopleft-mask"><a href="/project/<%= project.id %>"></a></div>
+              <div class="quartercircletopright-mask"><a href="/project/<%= project.id %>"></a></div>
+              <div class="quartercirclebottomright-mask"><a href="/project/<%= project.id %>"></a></div>
+              <div class="quartercirclebottomleft-mask"><a href="/project/<%= project.id %>"></a></div>
               <!--<a href="img/sliders/carousel/img01.jpg" data-rel="prettyPhoto" class="zoom-icon"></a>-->
             </div><!-- mask-icon -->
           </div><!-- mask -->
