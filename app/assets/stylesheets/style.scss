@@ -133,7 +133,7 @@ hr.soften {
 .login-button { float:right; font-size:10px; margin-right:15px;}
 .login-button a { padding-left:20px;}
 .login-button::before {
-	background: url('../img/ico/inputico.png') 0 0 no-repeat;
+	background: image-url("theme/inputico.png") 0 0 no-repeat;
 	content: '\0020';
 	display: inline-block;
 	height: 20px;
@@ -146,8 +146,8 @@ hr.soften {
 .login-box button { float:left;}
 .login-box .input-prepend, .login-box .input-append { margin-bottom:10px; }
 .login-box label { display: block; margin-bottom:10px; }
-input[type=text].user-ico { background: #fff url('../img/ico/inputico.png') 5px -20px no-repeat; padding-left: 25px; }
-input[type=password].user-passwd { background: #fff url('../img/ico/inputico.png') 5px -46px no-repeat; padding-left: 25px; }
+input[type=text].user-ico { background: #fff image-url("theme/inputico.png") 5px -20px no-repeat; padding-left: 25px; }
+input[type=password].user-passwd { background: #fff image-url("theme/inputico.png") 5px -46px no-repeat; padding-left: 25px; }
 
 
 	
