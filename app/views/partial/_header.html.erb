@@ -31,10 +31,12 @@
           <li class="<%= is_active?('/team') %>"><%= link_to "Team", '/team' %></li>
           <li class="<%= is_active?('/projects') %>"><%= link_to "Projects", '/projects' %></li>
           <li class="<%= is_active?('/faq') %>"><%= link_to "FAQ", '/faq' %></li>
-
+          <% if current_user and current_user.admin? %>
+              <li class="<%= is_active?('/admin') %>"><%= link_to "Admin", '/admin' %></li>
+          <% end %>
 
           <!--<li class="active">
-            <%= link_to "Home", root_path %>
+
             &lt;!&ndash;<a href="index.html">Home</a>&ndash;&gt;
           </li>
           <li><a href="team">Team</a>
