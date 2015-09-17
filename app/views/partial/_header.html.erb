@@ -8,8 +8,10 @@
     <div class="login-box">
 
     </div>
-    <div class="login-button toggle">
-
+    <div class="login-button">
+      <% if user_signed_in? %>
+          <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+      <% end%>
     </div><!-- login-button -->
   </div><!-- top-panel -->
 
