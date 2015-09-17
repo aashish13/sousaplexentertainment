@@ -158,11 +158,11 @@ input[type=password].user-passwd { background: #fff url('../img/ico/inputico.png
 /* -------------------------------------------------- */
 #menu { float: left; margin: 35px 0 15px 0; font-weight: bold; }
 
-.fix-fish-menu { position:relative; z-index: 9000; }
+.fix-fish-menu { position:relative; z-index: 9000; width:100%}
 #menu-wrapper { }
-.sf-menu, .sf-menu * { margin: 0; padding: 0; list-style: none; }
+.sf-menu, .sf-menu * { margin: 0; padding: 0; list-style: none;; width:100% }
 .sf-menu { float: left; }
-.sf-menu li { background-color: #1e2126; float: left; position: relative; margin-right: 15px;  }
+.sf-menu li { background-color: #1e2126; float: left; position: relative; margin-right: 15px;  width:23% }
 .sf-menu > li {margin-bottom:15px;}
 .sf-menu ul { position: absolute; top: -999em; text-align:left; border-top: 5px solid #FFFC00; border-bottom: 1px solid #FFFC00; }
 .sf-menu ul li { background-color: #1e2126; margin-right: 0;  }
